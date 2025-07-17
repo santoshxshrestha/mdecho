@@ -84,7 +84,7 @@ body {
 }
 
 /* doing this to make the pre invisible but act what it should do  */
-pre{
+.pre-tag{
   margin: 0;
   padding: 0;
   display: contents;

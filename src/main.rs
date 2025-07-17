@@ -40,7 +40,7 @@ async fn submit_markdown(form: Form<FormData>) -> impl Responder {
 
     HttpResponse::Ok()
         .content_type("text/html")
-        .body(format!("<pre>{}<pre>", html_output))
+        .body(format!("<pre class=\"pre-tag\">{}<pre>", html_output))
 }
 
 #[actix_web::main]
