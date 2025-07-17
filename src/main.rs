@@ -32,7 +32,7 @@ struct FormData {
 
 #[post("/submit")]
 async fn submit_markdown(form: Form<FormData>) -> impl Responder {
-    let mut options = Options::all();
+    let options = Options::all();
     let parser = pulldown_cmark::Parser::new_ext(&form.content, options);
     let mut html_output = String::new();
     pulldown_cmark::html::push_html(&mut html_output, parser);
@@ -40,7 +40,7 @@ async fn submit_markdown(form: Form<FormData>) -> impl Responder {
 
     HttpResponse::Ok()
         .content_type("text/html")
-        .body((format!("<pre>{}<pre>", html_output)))
+        .body(format!("<pre>{}<pre>", html_output))
 }
 
 #[actix_web::main]
