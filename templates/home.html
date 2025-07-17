@@ -16,9 +16,15 @@
         <div class="panel-header">
           <span>Markdown Editor</span>
         </div>
-        <textarea
-          class="editor-textarea"
-          placeholder="Start writing your markdown here...
+        <form
+          hx-post="/submit"
+          hx-target=".preview-content"
+          hx-trigger="keyup"
+          hx-swap="innerHTML"
+        >
+          <textarea
+            class="editor-textarea"
+            placeholder="Start writing your markdown here...
 
 # Example Heading
 
@@ -39,16 +45,8 @@ function hello() {
 - List item 3
 
 [Link to example](https://example.com)"
-        ></textarea>
-        <button
-          hx-post="/submit"
-          hx-target=".preview-content"
-          hx-trigger="click"
-          hx-swap="innerHTML"
-        >
-          Put To Messages
-        </button>
-        <button type="" hx-put=""></button>
+          ></textarea>
+        </form>
       </div>
 
       <div class="resize-handle"></div>
