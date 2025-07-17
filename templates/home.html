@@ -1,23 +1,24 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markdown Editor</title>
+    <link rel="stylesheet" href="../static/css/home.css" />
+    <script src="../static/js/htmx.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Markdown Editor</title>
-  <link rel="stylesheet" href="../static/css/home.css" />
-  <script src="../static/js/htmx.min.js"></script>
-</head>
+  <body>
+    <button class="theme-toggle" title="Toggle theme">🌙</button>
 
-<body>
-  <button class="theme-toggle" title="Toggle theme">🌙</button>
-
-  <div class="container">
-    <div class="editor-panel">
-      <div class="panel-header">
-        <span>Markdown Editor</span>
-      </div>
-      <textarea class="editor-textarea" placeholder="Start writing your markdown here...
+    <div class="container">
+      <div class="editor-panel">
+        <div class="panel-header">
+          <span>Markdown Editor</span>
+        </div>
+        <textarea
+          class="editor-textarea"
+          placeholder="Start writing your markdown here...
 
 # Example Heading
 
@@ -37,36 +38,45 @@ function hello() {
 - List item 2
 - List item 3
 
-[Link to example](https://example.com)"></textarea>
-    </div>
-
-    <div class="resize-handle"></div>
-
-    <div class="preview-panel">
-      <div class="panel-header">
-        <span>Preview</span>
+[Link to example](https://example.com)"
+        ></textarea>
+        <button
+          hx-post="/submit"
+          hx-target=".preview-content"
+          hx-trigger="click"
+          hx-swap="innerHTML"
+        >
+          Put To Messages
+        </button>
+        <button type="" hx-put=""></button>
       </div>
-      <div class="preview-content">
-        <h1>Example Heading</h1>
-        <p>
-          This is a <strong>bold</strong> text and this is <em>italic</em>.
-        </p>
-        <h2>Code Example</h2>
-        <pre><code class="language-javascript">function hello() {
+
+      <div class="resize-handle"></div>
+
+      <div class="preview-panel">
+        <div class="panel-header">
+          <span>Preview</span>
+        </div>
+        <div class="preview-content">
+          <h1>Example Heading</h1>
+          <p>
+            This is a <strong>bold</strong> text and this is <em>italic</em>.
+          </p>
+          <h2>Code Example</h2>
+          <pre><code class="language-javascript">function hello() {
             console.log('Hello, World!');
             }</code></pre>
-        <blockquote>
-          <p>This is a blockquote</p>
-        </blockquote>
-        <ul>
-          <li>List item 1</li>
-          <li>List item 2</li>
-          <li>List item 3</li>
-        </ul>
-        <p><a href="https://example.com">Link to example</a></p>
+          <blockquote>
+            <p>This is a blockquote</p>
+          </blockquote>
+          <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+          </ul>
+          <p><a href="https://example.com">Link to example</a></p>
+        </div>
       </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
