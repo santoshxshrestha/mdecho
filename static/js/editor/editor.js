@@ -26,10 +26,12 @@ function toggleVimMode() {
         editor.setOption('keyMap', 'default');
         toggleButton.textContent = ' ';
         vimModeEnabled = false;
+        localStorage.setItem("editor", "vim");
     } else {
         editor.setOption('keyMap', 'vim');
         toggleButton.textContent = ' ';
         vimModeEnabled = true;
+        localStorage.setItem("editor", "vscode");
     }
 
     editor.focus();
