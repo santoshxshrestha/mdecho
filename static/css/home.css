@@ -200,6 +200,40 @@ form {
   transform: scale(0.95);
 }
 
+
+#vim-toggle {
+  position: fixed;
+  top: 20px;
+  right: 52%;
+  background: var(--button-bg);
+  color: var(--button-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow:
+  0 1px 3px rgba(0, 0, 0, 0.12),
+  0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+#vim-toggle:hover {
+  background: var(--button-hover);
+  box-shadow:
+  0 3px 6px rgba(0, 0, 0, 0.16),
+  0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+#vim-toggle:active {
+  transform: scale(0.95);
+}
+
 /* Preview content styles - same as your original */
 .preview-content h1,
 .preview-content h2,
@@ -429,4 +463,98 @@ form {
   right: -2px;
   bottom: 0;
   background: transparent;
+}
+
+.cm-s-mytheme.CodeMirror {
+  background-color: var(--editor-bg);
+  color: var(--text-color);
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  height: 100%;
+}
+
+.cm-s-mytheme .CodeMirror-lines {
+  padding: 16px;
+}
+
+.cm-s-mytheme .CodeMirror-cursor {
+  border-left: 1px solid var(--link-color);
+}
+
+.cm-s-mytheme .CodeMirror-selected {
+  background-color: var(--selection-bg);
+}
+
+.cm-s-mytheme .CodeMirror-line::selection,
+.cm-s-mytheme .CodeMirror-line > span::selection,
+.cm-s-mytheme .CodeMirror-line > span > span::selection {
+  background: var(--selection-bg);
+}
+
+.cm-s-mytheme .CodeMirror-gutters {
+  background-color: var(--code-bg);
+  color: var(--quote-text);
+  border-right: 1px solid var(--border-color);
+}
+
+.cm-s-mytheme .CodeMirror-linenumber {
+  color: var(--quote-text);
+}
+
+.cm-s-mytheme .CodeMirror-matchingbracket {
+  outline: 1px solid var(--link-color);
+  color: inherit;
+}
+
+/* Optional: Match markdown syntax colors */
+.cm-s-mytheme span.cm-header {
+  color: var(--heading-color);
+  font-weight: bold;
+}
+
+.cm-s-mytheme span.cm-link {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+.cm-s-mytheme span.cm-quote {
+  color: var(--quote-text);
+  font-style: italic;
+}
+
+.cm-s-mytheme span.cm-strong {
+  font-weight: bold;
+}
+
+.cm-s-mytheme span.cm-em {
+  font-style: italic;
+}
+
+.cm-s-mytheme span.cm-comment {
+  color: #8b949e;
+  font-style: italic;
+}
+
+/* Scrollbar matching your theme */
+.cm-s-mytheme .CodeMirror-scrollbar-filler,
+.cm-s-mytheme .CodeMirror-gutter-filler {
+  background-color: var(--editor-bg);
+}
+
+.cm-s-mytheme .CodeMirror-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cm-s-mytheme .CodeMirror-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+.cm-s-mytheme .CodeMirror-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--border-color);
+}
+
+.cm-s-mytheme .CodeMirror-scrollbar::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
 }
