@@ -20,6 +20,7 @@
   --table-row-hover: #161b22;
   --hr-color: #30363d;
   --selection-bg: #264f78;
+  --selection-fg: #0d1117;
   --editor-bg: #0d1117;
   --scrollbar-thumb: #30363d;
   --scrollbar-track: #161b22;
@@ -47,6 +48,7 @@
   --table-row-hover: #f6f8fa;
   --hr-color: #d1d9e0;
   --selection-bg: #0969da20;
+  --selection-fg: #ffffff;
   --editor-bg: #ffffff;
   --scrollbar-thumb: #d1d9e0;
   --scrollbar-track: #f6f8fa;
@@ -70,7 +72,6 @@ body {
   background-color 0.2s ease,
   color 0.2s ease;
   height: 100vh;
-  overflow: hidden;
 }
 
 ::selection {
@@ -125,7 +126,7 @@ form {
   ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
   "Liberation Mono", monospace;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1;
   background-color: var(--editor-bg);
   color: var(--text-color);
   resize: none;
@@ -242,23 +243,23 @@ form {
 .preview-content h4,
 .preview-content h5,
 .preview-content h6 {
-  margin-top: 24px;
-  margin-bottom: 16px;
+  margin-top: 15px;
+  margin-bottom: 10px;
   font-weight: 600;
-  line-height: 0.5;
+  line-height: 1.5;
   color: var(--heading-color);
 }
 
 .preview-content h1 {
   font-size: 2em;
-  margin-bottom: 16px;
+  margin-bottom: -10px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--border-color);
 }
 
 .preview-content h2 {
   font-size: 1.5em;
-  margin-bottom: 16px;
+  margin-bottom: -8px;
   padding-bottom: 8px;
   border-bottom: 1px solid var(--border-color);
 }
@@ -310,7 +311,7 @@ form {
   ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
   "Liberation Mono", monospace;
   font-size: 85%;
-  line-height: 1;
+  line-height: 1.5;
 }
 
 .preview-content pre code {
@@ -328,6 +329,7 @@ form {
   color: var(--quote-text);
   background-color: var(--quote-bg);
   border-radius: 0 6px 6px 0;
+  line-height: 1.5;
 }
 
 .preview-content blockquote> :first-child {
@@ -352,7 +354,8 @@ form {
 .preview-content ol {
   padding-left: 2em;
   margin-top: 0;
-  margin-bottom: 16px;
+  margin-bottom: 4px;
+  line-height: 1;
 }
 
 .preview-content li+li {
@@ -421,7 +424,7 @@ form {
   ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
   "Liberation Mono", monospace;
   font-size: 11px;
-  line-height: 1;
+  line-height: 1.5;
   padding: 3px 5px;
   vertical-align: middle;
 }
@@ -430,24 +433,26 @@ form {
 .resize-handle {
   width: 4px;
   background: var(--border-color);
-  cursor: col-resize;
+  /* cursor: col-resize; */
+  /* not using it for now  */
   position: relative;
   transition: background-color 0.2s ease;
 }
 
-.resize-handle:hover {
-  background: var(--link-color);
-}
+/* no need because of not using it right now   */
+/* .resize-handle:hover { */
+/*   background: var(--link-color); */
+/* } */
 
-.resize-handle::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -2px;
-  right: -2px;
-  bottom: 0;
-  background: transparent;
-}
+/* .resize-handle::before { */
+/*   content: ""; */
+/*   position: absolute; */
+/*   top: 0; */
+/*   left: -2px; */
+/*   right: -2px; */
+/*   bottom: 0; */
+/*   background: transparent; */
+/* } */
 
 .cm-s-mytheme.CodeMirror {
   background-color: var(--editor-bg);
@@ -468,12 +473,14 @@ form {
 
 .cm-s-mytheme .CodeMirror-selected {
   background-color: var(--selection-bg);
+  color: var(--selection-fg);
 }
 
 .cm-s-mytheme .CodeMirror-line::selection,
 .cm-s-mytheme .CodeMirror-line > span::selection,
 .cm-s-mytheme .CodeMirror-line > span > span::selection {
   background: var(--selection-bg);
+  color: var(--selection-fg);
 }
 
 .cm-s-mytheme .CodeMirror-gutters {
