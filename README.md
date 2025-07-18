@@ -1,6 +1,6 @@
 # mdecho
 
-A sleek web-based Markdown editor that echoes your changes live with a side-by-side preview for seamless writing.
+A sleek, fast, and minimal web-based **Markdown editor** with **live preview** and built-in **Vim keybindings**.
 
 ## Features
 
@@ -8,6 +8,7 @@ A sleek web-based Markdown editor that echoes your changes live with a side-by-s
 - Side-by-side editor and preview layout
 - Real-time synchronization between editor and preview
 - Clean and minimal interface
+- Built-in **Vim motions** via CodeMirror for power users
 
 ## Usage
 
