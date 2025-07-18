@@ -1,33 +1,28 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Markdown Editor</title>
-    <link rel="stylesheet" href="../static/css/home.css" />
-    <script src="../static/js/htmx.min.js"></script>
-  </head>
 
-  <body>
-    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
-      🌙
-    </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Markdown Editor</title>
+  <link rel="stylesheet" href="../static/css/home.css" />
+  <script src="../static/js/htmx.min.js"></script>
+  <script src="../static/js/keymap/vim.js"></script>
+  <script src="../static/js/codemirror.js"></script>
+</head>
 
-    <div class="container">
-      <div class="editor-panel">
-        <div class="panel-header">
-          <span>Markdown Editor</span>
-        </div>
-        <form
-          hx-post="/submit"
-          hx-target=".preview-content"
-          hx-trigger="keyup"
-          hx-swap="innerHTML"
-        >
-          <textarea
-            class="editor-textarea"
-            name="content"
-            placeholder="Start writing your markdown here...
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+    🌙
+  </button>
+
+  <div class="container">
+    <div class="editor-panel">
+      <div class="panel-header">
+        <span>Markdown Editor</span>
+      </div>
+      <form hx-post="/submit" hx-target=".preview-content" hx-trigger="keyup" hx-swap="innerHTML">
+        <textarea class="editor-textarea" name="content" placeholder="Start writing your markdown here...
 
 # Example Heading
 
@@ -47,39 +42,39 @@ function hello() {
 - List item 2
 - List item 3
 
-[Link to example](https://example.com)"
-          ></textarea>
-        </form>
+[Link to example](https://example.com)"></textarea>
+      </form>
+    </div>
+
+    <div class="resize-handle"></div>
+
+    <div class="preview-panel">
+      <div class="panel-header">
+        <span>Preview</span>
       </div>
-
-      <div class="resize-handle"></div>
-
-      <div class="preview-panel">
-        <div class="panel-header">
-          <span>Preview</span>
-        </div>
-        <div class="preview-content">
-          <h1>Example Heading</h1>
-          <p>
-            This is a <strong>bold</strong> text and this is <em>italic</em>.
-          </p>
-          <h2>Code Example</h2>
-          <pre><code class="language-javascript">function hello() {
+      <div class="preview-content">
+        <h1>Example Heading</h1>
+        <p>
+          This is a <strong>bold</strong> text and this is <em>italic</em>.
+        </p>
+        <h2>Code Example</h2>
+        <pre><code class="language-javascript">function hello() {
             console.log('Hello, World!');
             }</code></pre>
-          <blockquote>
-            <p>This is a blockquote</p>
-          </blockquote>
-          <ul>
-            <li>List item 1</li>
-            <li>List item 2</li>
-            <li>List item 3</li>
-          </ul>
-          <p><a href="https://example.com">Link to example</a></p>
-        </div>
+        <blockquote>
+          <p>This is a blockquote</p>
+        </blockquote>
+        <ul>
+          <li>List item 1</li>
+          <li>List item 2</li>
+          <li>List item 3</li>
+        </ul>
+        <p><a href="https://example.com">Link to example</a></p>
       </div>
     </div>
-    <script src="../static/js/toggle_theme.js"></script>
-    <script src="../static/js/prev_theme.js"></script>
-  </body>
+  </div>
+  <script src="../static/js/toggle_theme.js"></script>
+  <script src="../static/js/prev_theme.js"></script>
+</body>
+
 </html>
