@@ -141,7 +141,8 @@ form {
   padding: 16px;
   overflow-y: auto;
   background-color: var(--bg-color);
-  white-space: pre-line; /* This preserves line breaks but allows wrapping */
+  white-space: pre-line;
+  /* This preserves line breaks but allows wrapping */
 }
 
 /* Scrollbar styles */
@@ -244,7 +245,7 @@ form {
   margin-top: 24px;
   margin-bottom: 16px;
   font-weight: 600;
-  line-height: 1.25;
+  line-height: 0.5;
   color: var(--heading-color);
 }
 
@@ -309,7 +310,7 @@ form {
   ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
   "Liberation Mono", monospace;
   font-size: 85%;
-  line-height: 1.45;
+  line-height: 1;
 }
 
 .preview-content pre code {
@@ -420,7 +421,7 @@ form {
   ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
   "Liberation Mono", monospace;
   font-size: 11px;
-  line-height: 10px;
+  line-height: 1;
   padding: 3px 5px;
   vertical-align: middle;
 }
