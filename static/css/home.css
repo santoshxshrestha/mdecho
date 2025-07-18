@@ -555,13 +555,13 @@ form {
 
 
   .theme-toggle{
-    top: 53%
-    right: 20px
+    top: 53%;
+    right: 20px;
   }
 
   #vim-toggle{
-    top: 20px
-    right: 20px
+    top: 20px;
+    right: 20px;
   }
 }
 
