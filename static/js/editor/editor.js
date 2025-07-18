@@ -24,11 +24,11 @@ function toggleVimMode() {
 
     if (vimModeEnabled) {
         editor.setOption('keyMap', 'default');
-        toggleButton.textContent = 'Vim: OFF';
+        toggleButton.textContent = ' ';
         vimModeEnabled = false;
     } else {
         editor.setOption('keyMap', 'vim');
-        toggleButton.textContent = 'Vim: ON';
+        toggleButton.textContent = ' ';
         vimModeEnabled = true;
     }
 
