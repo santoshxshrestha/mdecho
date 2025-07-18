@@ -425,23 +425,6 @@ form {
   vertical-align: middle;
 }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .editor-panel {
-    border-right: none;
-    border-bottom: 1px solid var(--border-color);
-  }
-
-  .theme-toggle {
-    top: 15px;
-    right: 15px;
-  }
-}
-
 /* Resize handle */
 .resize-handle {
   width: 4px;
@@ -558,3 +541,27 @@ form {
 .cm-s-mytheme .CodeMirror-scrollbar::-webkit-scrollbar-track {
   background: var(--scrollbar-track);
 }
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .editor-panel {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+
+  .theme-toggle{
+    top: 53%
+    right: 20px
+  }
+
+  #vim-toggle{
+    top: 20px
+    right: 20px
+  }
+}
+
