@@ -1,6 +1,10 @@
 let editor;
 let vimModeEnabled = false;
 
+function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const textarea = document.getElementById('editor-textarea');
 
@@ -17,6 +21,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     editor.setValue(textarea.placeholder);
+
+    if (isMobileDevice()){
+        vimModeEnabled = false;
+        document.getElementById('vim-toggle').style.display = "none";
+        localStorage.setItem("editor", "vscode");
+    }
 });
 
 function toggleVimMode() {
