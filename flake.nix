@@ -13,6 +13,7 @@
           rustc
           cargo
           rustfmt
+          cargo-watch
           openssl
           rust-analyzer
           nodejs # for css_ls

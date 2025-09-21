@@ -1,4 +1,3 @@
-#![allow(unused)]
 use actix_files::Files;
 use actix_web::post;
 use actix_web::web::Form;
@@ -12,16 +11,11 @@ use serde::Deserialize;
 
 #[derive(Template)]
 #[template(path = "home.html")]
-struct HelloTemplate {
-    hello: String,
-}
+struct HomeTemplate;
 
 #[get("/")]
 async fn home() -> impl Responder {
-    let template = HelloTemplate {
-        hello: "hello rust".to_string(),
-    };
-
+    let template = HomeTemplate;
     HttpResponse::Ok().body(template.render().unwrap())
 }
 
