@@ -16,7 +16,10 @@ struct HomeTemplate;
 #[get("/")]
 async fn home() -> impl Responder {
     let template = HomeTemplate;
-    HttpResponse::Ok().body(template.render().unwrap())
+    match template.render() {
+        Ok(rendered) => HttpResponse::Ok().body(rendered),
+        Err(_) => HttpResponse::InternalServerError().body("Template error"),
+    }
 }
 
 #[derive(Debug, Deserialize)]
