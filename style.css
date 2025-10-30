@@ -62,15 +62,15 @@ body {
   margin: 0;
   padding: 0;
   font-family:
-  -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica,
-  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-size: 16px;
   line-height: 1.5;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition:
-  background-color 0.2s ease,
-  color 0.2s ease;
+    background-color 0.2s ease,
+    color 0.2s ease;
   height: 100vh;
 }
 
@@ -117,14 +117,14 @@ form {
   display: contents;
 }
 
-.editor-textarea {
+#editor-textarea {
   flex: 1;
   border: none;
   outline: none;
   padding: 16px;
   font-family:
-  ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
-  "Liberation Mono", monospace;
+    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono",
+    monospace;
   font-size: 14px;
   line-height: 1;
   background-color: var(--editor-bg);
@@ -133,11 +133,11 @@ form {
   tab-size: 4;
 }
 
-.editor-textarea::placeholder {
+#editor-textarea::placeholder {
   color: var(--quote-text);
 }
 
-.preview-content {
+#preview-area {
   flex: 1;
   padding: 16px;
   overflow-y: auto;
@@ -147,24 +147,24 @@ form {
 }
 
 /* Scrollbar styles */
-.editor-textarea::-webkit-scrollbar,
-.preview-content::-webkit-scrollbar {
+#editor-textarea::-webkit-scrollbar,
+#preview-area::-webkit-scrollbar {
   width: 8px;
 }
 
-.editor-textarea::-webkit-scrollbar-track,
-.preview-content::-webkit-scrollbar-track {
+#editor-textarea::-webkit-scrollbar-track,
+#preview-area::-webkit-scrollbar-track {
   background: var(--scrollbar-track);
 }
 
-.editor-textarea::-webkit-scrollbar-thumb,
-.preview-content::-webkit-scrollbar-thumb {
+#editor-textarea::-webkit-scrollbar-thumb,
+#preview-area::-webkit-scrollbar-thumb {
   background: var(--scrollbar-thumb);
   border-radius: 4px;
 }
 
-.editor-textarea::-webkit-scrollbar-thumb:hover,
-.preview-content::-webkit-scrollbar-thumb:hover {
+#editor-textarea::-webkit-scrollbar-thumb:hover,
+#preview-area::-webkit-scrollbar-thumb:hover {
   background: var(--border-color);
 }
 
@@ -182,8 +182,8 @@ form {
   font-size: 16px;
   cursor: pointer;
   box-shadow:
-  0 1px 3px rgba(0, 0, 0, 0.12),
-  0 1px 2px rgba(0, 0, 0, 0.24);
+    0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
@@ -194,14 +194,13 @@ form {
 .theme-toggle:hover {
   background: var(--button-hover);
   box-shadow:
-  0 3px 6px rgba(0, 0, 0, 0.16),
-  0 3px 6px rgba(0, 0, 0, 0.23);
+    0 3px 6px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .theme-toggle:active {
   transform: scale(0.95);
 }
-
 
 #vim-toggle {
   position: fixed;
@@ -216,8 +215,8 @@ form {
   font-size: 16px;
   cursor: pointer;
   box-shadow:
-  0 1px 3px rgba(0, 0, 0, 0.12),
-  0 1px 2px rgba(0, 0, 0, 0.24);
+    0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
@@ -228,8 +227,8 @@ form {
 #vim-toggle:hover {
   background: var(--button-hover);
   box-shadow:
-  0 3px 6px rgba(0, 0, 0, 0.16),
-  0 3px 6px rgba(0, 0, 0, 0.23);
+    0 3px 6px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 #vim-toggle:active {
@@ -237,12 +236,12 @@ form {
 }
 
 /* Preview content styles - same as your original */
-.preview-content h1,
-.preview-content h2,
-.preview-content h3,
-.preview-content h4,
-.preview-content h5,
-.preview-content h6 {
+#preview-area h1,
+#preview-area h2,
+#preview-area h3,
+#preview-area h4,
+#preview-area h5,
+#preview-area h6 {
   margin-top: 15px;
   margin-bottom: 10px;
   font-weight: 600;
@@ -250,55 +249,55 @@ form {
   color: var(--heading-color);
 }
 
-.preview-content h1 {
+#preview-area h1 {
   font-size: 2em;
   margin-bottom: -10px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--border-color);
 }
 
-.preview-content h2 {
+#preview-area h2 {
   font-size: 1.5em;
   margin-bottom: -8px;
   padding-bottom: 8px;
   border-bottom: 1px solid var(--border-color);
 }
 
-.preview-content h3 {
+#preview-area h3 {
   font-size: 1.25em;
 }
 
-.preview-content h4 {
+#preview-area h4 {
   font-size: 1em;
 }
 
-.preview-content h5 {
+#preview-area h5 {
   font-size: 0.875em;
 }
 
-.preview-content h6 {
+#preview-area h6 {
   font-size: 0.85em;
   color: var(--quote-text);
 }
 
-.preview-content p {
+#preview-area p {
   margin-top: 0;
   margin-bottom: 16px;
 }
 
-.preview-content code {
+#preview-area code {
   background: var(--code-bg);
   padding: 0.2em 0.4em;
   border-radius: 6px;
   font-family:
-  ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
-  "Liberation Mono", monospace;
+    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono",
+    monospace;
   font-size: 85%;
   color: var(--code-color);
   border: 1px solid var(--code-border);
 }
 
-.preview-content pre {
+#preview-area pre {
   background: var(--code-bg);
   padding: 16px;
   overflow: auto;
@@ -308,13 +307,13 @@ form {
   margin-top: 0;
   margin-bottom: 16px;
   font-family:
-  ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
-  "Liberation Mono", monospace;
+    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono",
+    monospace;
   font-size: 85%;
   line-height: 1.5;
 }
 
-.preview-content pre code {
+#preview-area pre code {
   background: transparent;
   border: none;
   padding: 0;
@@ -322,7 +321,7 @@ form {
   color: inherit;
 }
 
-.preview-content blockquote {
+#preview-area blockquote {
   border-left: 4px solid var(--quote-border);
   padding: 0 1em;
   margin: 0 0 16px 0;
@@ -332,37 +331,37 @@ form {
   line-height: 1.5;
 }
 
-.preview-content blockquote> :first-child {
+#preview-area blockquote > :first-child {
   margin-top: 0;
 }
 
-.preview-content blockquote> :last-child {
+#preview-area blockquote > :last-child {
   margin-bottom: 0;
 }
 
-.preview-content a {
+#preview-area a {
   color: var(--link-color);
   text-decoration: none;
 }
 
-.preview-content a:hover {
+#preview-area a:hover {
   color: var(--link-hover);
   text-decoration: underline;
 }
 
-.preview-content ul,
-.preview-content ol {
+#preview-area ul,
+#preview-area ol {
   padding-left: 2em;
   margin-top: 0;
   margin-bottom: 4px;
   line-height: 1;
 }
 
-.preview-content li+li {
+#preview-area li + li {
   margin-top: 0.25em;
 }
 
-.preview-content table {
+#preview-area table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
@@ -370,27 +369,27 @@ form {
   margin-bottom: 16px;
 }
 
-.preview-content th,
-.preview-content td {
+#preview-area th,
+#preview-area td {
   padding: 6px 13px;
   border: 1px solid var(--table-border);
   text-align: left;
 }
 
-.preview-content th {
+#preview-area th {
   background-color: var(--table-header-bg);
   font-weight: 600;
 }
 
-.preview-content tr {
+#preview-area tr {
   background-color: var(--table-row-bg);
 }
 
-.preview-content tr:nth-child(2n) {
+#preview-area tr:nth-child(2n) {
   background-color: var(--table-row-hover);
 }
 
-.preview-content hr {
+#preview-area hr {
   height: 0.25em;
   padding: 0;
   margin: 24px 0;
@@ -399,21 +398,21 @@ form {
   border-radius: 2px;
 }
 
-.preview-content img {
+#preview-area img {
   max-width: 100%;
   height: auto;
   border-radius: 6px;
 }
 
-.preview-content strong {
+#preview-area strong {
   font-weight: 600;
 }
 
-.preview-content em {
+#preview-area em {
   font-style: italic;
 }
 
-.preview-content kbd {
+#preview-area kbd {
   background-color: var(--code-bg);
   border: 1px solid var(--code-border);
   border-radius: 3px;
@@ -421,8 +420,8 @@ form {
   color: var(--code-color);
   display: inline-block;
   font-family:
-  ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
-  "Liberation Mono", monospace;
+    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono",
+    monospace;
   font-size: 11px;
   line-height: 1.5;
   padding: 3px 5px;
@@ -439,25 +438,12 @@ form {
   transition: background-color 0.2s ease;
 }
 
-/* no need because of not using it right now   */
-/* .resize-handle:hover { */
-/*   background: var(--link-color); */
-/* } */
-
-/* .resize-handle::before { */
-/*   content: ""; */
-/*   position: absolute; */
-/*   top: 0; */
-/*   left: -2px; */
-/*   right: -2px; */
-/*   bottom: 0; */
-/*   background: transparent; */
-/* } */
-
 .cm-s-mytheme.CodeMirror {
   background-color: var(--editor-bg);
   color: var(--text-color);
-  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  font-family:
+    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono",
+    monospace;
   font-size: 14px;
   line-height: 1.5;
   height: 100%;
@@ -561,15 +547,13 @@ form {
     border-bottom: 1px solid var(--border-color);
   }
 
-
-  .theme-toggle{
+  .theme-toggle {
     top: 53%;
     right: 20px;
   }
 
-  #vim-toggle{
+  #vim-toggle {
     top: 20px;
     right: 20px;
   }
 }
-
