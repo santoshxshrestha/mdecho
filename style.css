@@ -142,7 +142,7 @@ form {
   padding: 16px;
   overflow-y: auto;
   background-color: var(--bg-color);
-  white-space: pre-line;
+  white-space: pre-wrap;
   /* This preserves line breaks but allows wrapping */
 }
 
@@ -242,24 +242,20 @@ form {
 #preview-area h4,
 #preview-area h5,
 #preview-area h6 {
-  margin-top: 15px;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: -10px;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1;
   color: var(--heading-color);
 }
 
 #preview-area h1 {
   font-size: 2em;
-  margin-bottom: -10px;
-  padding-bottom: 10px;
   border-bottom: 1px solid var(--border-color);
 }
 
 #preview-area h2 {
   font-size: 1.5em;
-  margin-bottom: -8px;
-  padding-bottom: 8px;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -282,7 +278,7 @@ form {
 
 #preview-area p {
   margin-top: 0;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
 #preview-area code {
@@ -305,7 +301,7 @@ form {
   color: var(--code-color);
   border: 1px solid var(--code-border);
   margin-top: 0;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   font-family:
     ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono",
     monospace;
@@ -323,8 +319,8 @@ form {
 
 #preview-area blockquote {
   border-left: 4px solid var(--quote-border);
-  padding: 0 1em;
-  margin: 0 0 16px 0;
+  padding: 0 12px;
+  margin: 0 0 10px 0;
   color: var(--quote-text);
   background-color: var(--quote-bg);
   border-radius: 0 6px 6px 0;
@@ -392,7 +388,7 @@ form {
 #preview-area hr {
   height: 0.25em;
   padding: 0;
-  margin: 24px 0;
+  margin: 10px 0;
   background-color: var(--hr-color);
   border: 0;
   border-radius: 2px;
