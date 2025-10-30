@@ -20,7 +20,10 @@
           cargo-watch
           openssl
           rust-analyzer
-          nodejs # for css_ls
+          clippy
+
+          nodejs
+          nodePackages.prettier
 
           wasm-pack
           rocmPackages.llvm.lld

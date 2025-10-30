@@ -1,4 +1,3 @@
-
 # mdecho
 
 This is learning by doing project for WebAssembly (WASM) using Rust.
@@ -6,8 +5,8 @@ so this might not be the most optimized or best way to implement this.
 
 A sleek, fast, and minimal web-based **Markdown editor** with **live preview** and built-in **Vim keybindings**. Powered entirely by WebAssembly (WASM)—no server required!
 
-![Dark Mode](../static/images/mdecho_dark.png)
-![Light Mode](../static/images/mdecho_light.png)
+![Dark Mode](./assets/images/mdecho_dark.png)
+![Light Mode](./assets/images/mdecho_light.png)
 
 ---
 
