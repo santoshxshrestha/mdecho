@@ -19,7 +19,7 @@ A sleek, fast, and minimal web-based **Markdown editor** with **live preview** a
 
 ## Usage
 
-Visit the live application at [mdecho](santoshxshrestha.github.io/mdecho/)!
+Visit the live application at [mdecho](https://santoshxshrestha.github.io/mdecho/)!
 
 Or host it yourself—just serve the static files in this repo!
 
