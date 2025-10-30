@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - linked the css according to then new project structure.
+- linked the scripts according to then new project structure.
 
 ## [0.2.0] - 2025-11-30
 
