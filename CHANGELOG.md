@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - dependencies: `wasm-bindgen`, `wasm-pack`.
 - Formatter configuration
 - converted crate into library crate.
+- CI/CD pipeline using GitHub Actions.
 
 ### Fixed
 
@@ -31,7 +32,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial working state of the project.
 - Core dependencies: `actix-web`, `actix-files`, `ammonia`, `askama`, `serde`, `pulldoown-cmark`
 - Nix flake support for reproducible development environments.
-- CI/CD pipeline using GitHub Actions.
 - MIT License.
 - README and project documentation.
 

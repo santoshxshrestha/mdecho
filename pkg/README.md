@@ -1,8 +1,13 @@
+
 # mdecho
 
-A sleek, fast, and minimal web-based **Markdown editor** with **live preview** and built-in **Vim keybindings**.
-![Dark Mode](./static/images/mdecho_dark.png)
-![Light Mode](./static/images/mdecho_light.png)
+This is learning by doing project for WebAssembly (WASM) using Rust.
+so this might not be the most optimized or best way to implement this.
+
+A sleek, fast, and minimal web-based **Markdown editor** with **live preview** and built-in **Vim keybindings**. Powered entirely by WebAssembly (WASM)—no server required!
+
+![Dark Mode](../static/images/mdecho_dark.png)
+![Light Mode](../static/images/mdecho_light.png)
 
 ---
 
@@ -13,31 +18,41 @@ A sleek, fast, and minimal web-based **Markdown editor** with **live preview** a
 - Real-time synchronization between editor and preview
 - Clean and minimal interface
 - Built-in **Vim motions** via CodeMirror for power users
+- Runs fully client-side in your browser (WASM)
 
 ## Usage
 
-Visit the live application at [mdecho](https://mdecho.onrender.com/)
+Visit the live application at [mdecho](santoshxshrestha.github.io/mdecho/)!
+
+Or host it yourself—just serve the static files in this repo!
 
 ## Local Development
 
 ```bash
 git clone https://github.com/santoshxshrestha/mdecho.git
 cd mdecho
-cargo run
 ```
 
-Open your browser and navigate to `http://localhost:8080`
-
-## Development
+To build the WASM package:
 
 ```bash
-cargo run
+wasm-pack build --target web
 ```
+
+Then serve the static files (for example, using Python):
+
+```bash
+python3 -m http.server
+```
+
+Open your browser and navigate to `http://localhost:8000`
 
 ## Build
 
+To build the WASM package for release:
+
 ```bash
-cargo build --release
+wasm-pack build --release --target web
 ```
 
 ## License
