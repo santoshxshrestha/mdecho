@@ -1,0 +1,25 @@
+{
+  "name": "mdecho",
+  "type": "module",
+  "collaborators": [
+    "Santosh Shrestha <santoshxshrstha@gmail.com>"
+  ],
+  "description": "A Markdown to sanitized HTML converter.",
+  "version": "0.2.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/santoshxshrestha/mdecho"
+  },
+  "files": [
+    "mdecho_bg.wasm",
+    "mdecho.js",
+    "mdecho.d.ts"
+  ],
+  "main": "mdecho.js",
+  "homepage": "https://santoshxshrestha.github.io/mdecho/",
+  "types": "mdecho.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
