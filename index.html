@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markdown Editor</title>
+    <link rel="stylesheet" href="./static/css/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css"
+    />
+    <script src="./static/js/lib/htmx.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/markdown/markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/keymap/vim.min.js"></script>
+    <link rel="icon" href="./assets/images/favicon.ico" />
+  </head>
+
+  <body>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+      🌙
+    </button>
+    <div class="container">
+      <div class="editor-panel">
+        <div class="panel-header">
+          <span>MDEcho</span>
+
+          <button
+            id="vim-toggle"
+            onclick="toggleVimMode()"
+            title="Toggle Vim mode"
+          >
+            
+          </button>
+        </div>
+        <form>
+          <textarea
+            id="editor-textarea"
+            class="editor-textarea"
+            name="content"
+            placeholder="# Start writing your markdown here...
+# Hello World
+This is a **bold** word, and this is *italic*.
+> A short quote block.
+                            "
+          ></textarea>
+        </form>
+      </div>
+      <div class="resize-handle"></div>
+      <div class="preview-panel">
+        <div class="panel-header">
+          <span>Preview</span>
+        </div>
+        <div id="preview-area"></div>
+      </div>
+    </div>
+
+    <script type="module">
+      import init, { parse_markdown } from "./pkg/mdecho.js";
+      init().then(() => {
+        const textarea = document.getElementById("editor-textarea");
+        const previewArea = document.getElementById("preview-area");
+        textarea.addEventListener("keyup", () => {
+          previewArea.innerHTML = parse_markdown(textarea.value);
+        });
+      });
+    </script>
+
+    <script src="./static/js/theme.js"></script>
+    <script src="./static/js/editor.js"></script>
+  </body>
+</html>

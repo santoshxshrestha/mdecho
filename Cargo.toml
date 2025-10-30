@@ -1,12 +1,19 @@
 [package]
 name = "mdecho"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
+authors = ["Santosh Shrestha <santoshxshrstha@gmail.com>"]
+description = "A Markdown to sanitized HTML converter."
+license = "MIT"
+homepage = "https://santoshxshrestha.github.io/mdecho/"
+documentation = "https://github.com/santoshxshrestha/mdecho#readme"
+repository = "https://github.com/santoshxshrestha/mdecho"
+readme = "README.md"
+
+[lib]
+crate-type = ["cdylib"]
 
 [dependencies]
-actix-files = "0.6.6"
-actix-web = "4.11.0"
 ammonia = "4.1.1"
-askama = "0.14.0"
 pulldown-cmark = "0.13.0"
-serde = { version = "1.0.219", features = ["derive"] }
+wasm-bindgen = "0.2.105"

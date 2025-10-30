@@ -1,13 +1,17 @@
 {
   description = "Flake for mdecho";
 
-  inputs = { nixpkgs.url = "github:NixOS/nixpkgs?ref=nixos-unstable"; };
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs?ref=nixos-unstable";
+  };
 
-  outputs = { self, nixpkgs }:
+  outputs =
+    { self, nixpkgs }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
-    in {
+    in
+    {
       devShells.${system}.default = pkgs.mkShell {
         buildInputs = with pkgs; [
           rustc
@@ -16,7 +20,14 @@
           cargo-watch
           openssl
           rust-analyzer
-          nodejs # for css_ls
+          clippy
+
+          nodejs
+          nodePackages.prettier
+
+          wasm-pack
+          rocmPackages.llvm.lld
+          python3
         ];
         RUST_SRC_PATH = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
       };
