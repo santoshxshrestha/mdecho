@@ -1,7 +1,5 @@
-# mdecho
 
-This is learning by doing project for WebAssembly (WASM) using Rust.
-so this might not be the most optimized or best way to implement this.
+# mdecho
 
 A sleek, fast, and minimal web-based **Markdown editor** with **live preview** and built-in **Vim keybindings**. Powered entirely by WebAssembly (WASM)—no server required!
 
@@ -53,6 +51,11 @@ To build the WASM package for release:
 ```bash
 wasm-pack build --release --target web
 ```
+
+## Contributing
+
+This is learning by doing project for WebAssembly (WASM) using Rust.
+so this might not be the most optimized or best way to implement this.
 
 ## License
 
