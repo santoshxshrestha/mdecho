@@ -1,9 +1,10 @@
+
 # mdecho
 
 A sleek, fast, and minimal web-based **Markdown editor** with **live preview** and built-in **Vim keybindings**. Powered entirely by WebAssembly (WASM)—no server required!
 
-![Dark Mode](../assets/images/mdecho_dark.png)
-![Light Mode](../assets/images/mdecho_light.png)
+![Dark Mode](./assets/images/mdecho_dark.png)
+![Light Mode](./assets/images/mdecho_light.png)
 
 ---
 

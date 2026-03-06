@@ -14,6 +14,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/markdown/markdown.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/keymap/vim.min.js"></script>
     <link rel="icon" href="./assets/images/favicon.ico" />
+    <link id="hljs-theme-dark" rel="stylesheet" href="./js/lib/github-dark.min.css" />
+    <link id="hljs-theme-light" rel="stylesheet" href="./js/lib/github-light.min.css" disabled />
+    <script src="./js/lib/highlight.min.js"></script>
   </head>
 
   <body>
@@ -62,6 +65,7 @@ This is a **bold** word, and this is *italic*.
         const previewArea = document.getElementById("preview-area");
         textarea.addEventListener("keyup", () => {
           previewArea.innerHTML = parse_markdown(textarea.value);
+          highlightBlocks(previewArea);
         });
       });
     </script>
